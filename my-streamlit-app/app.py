@@ -1,17 +1,20 @@
 import streamlit as st
 import streamlit.components.v1 as components
+import os
 
-# Load HTML from file
-with open("index.html", "r", encoding="utf-8") as file:
-    html_content = file.read()
+# Utility function to read files safely
+def read_file(path):
+    if os.path.exists(path):
+        with open(path, "r", encoding="utf-8") as f:
+            return f.read()
+    else:
+        st.error(f"🚫 File not found: {path}")
+        return ""
 
-# Inject custom CSS
-with open("style.css", "r", encoding="utf-8") as file:
-    css = f"<style>{file.read()}</style>"
+# Read HTML, CSS, JS
+html = read_file("index.html")
+css = f"<style>{read_file('style.css')}</style>"
+js = f"<script>{read_file('main.js')}</script>"
 
-# Inject JavaScript
-with open("main.js", "r", encoding="utf-8") as file:
-    js = f"<script>{file.read()}</script>"
-
-# Render the component
-components.html(css + html_content + js, height=600, scrolling=True)
+# Show content
+components.html(css + html + js, height=800, scrolling=True)
