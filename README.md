@@ -13,7 +13,7 @@ https://github.com/Ashokkalluri26.github.io/
 
 
 #### About Page
-<img src="website_images/AboutPage.png" width="900">
+<img src="assets/img/about.jpg" width="900">
 
 
 #### Projects Page
