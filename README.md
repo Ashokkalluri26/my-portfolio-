@@ -9,8 +9,7 @@ https://github.com/Ashokkalluri26.github.io/
 
 ### Website Preview
 #### Home Page
-<img src="![Uploading homepage.gif…]()
-" width="900">
+<img src="assets/img/homepage.gif" width="900">
 
 
 #### About Page
