@@ -10,7 +10,7 @@ with open("style.css", "r", encoding="utf-8") as file:
     css = f"<style>{file.read()}</style>"
 
 # Inject JavaScript
-with open("script.js", "r", encoding="utf-8") as file:
+with open("main.js", "r", encoding="utf-8") as file:
     js = f"<script>{file.read()}</script>"
 
 # Render the component
