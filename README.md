@@ -1,4 +1,4 @@
-https://github.com/Ashokkalluri26//my-portfolio-
+https://Ashokkalluri26.github.io//my-portfolio-
 
 :star: Star me on GitHub — it helps!
 
