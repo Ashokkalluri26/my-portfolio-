@@ -18,8 +18,10 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #010e1b;
-  background-size: cover;
+  /* Animated gradient background */
+  background: linear-gradient(135deg, #0b1220 0%, #0a2a24 35%, #0a1f33 70%, #0b1220 100%);
+  background-size: 300% 300%;
+  animation: gradientShift 18s ease infinite;
   left: 0;
   right: 0;
   top: 0;
@@ -30,6 +32,28 @@ body::before {
   body::before {
     background-attachment: fixed;
   }
+}
+
+/* Subtle radial highlight overlay for visual interest */
+body::after {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  pointer-events: none;
+  background-image:
+    radial-gradient(1200px 600px at -10% -10%, rgba(18, 214, 64, 0.12), rgba(0,0,0,0) 55%),
+    radial-gradient(900px 500px at 110% 110%, rgba(99, 237, 163, 0.10), rgba(0,0,0,0) 55%);
+  z-index: 0;
+}
+
+/* Smooth gradient animation */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 a {
